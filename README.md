@@ -2,9 +2,7 @@
 
 **Description:** This code allows an user to book tickets based on a valid account ID for adults, Infants and Child.
 
-The busniess rules for this service is mentioned below:
-
- ** **Business Rules****
+**Business Rules**
         There are 3 types of tickets i.e. Infant, Child, and Adult.
         The ticket prices are based on the type of ticket (see table below).
         The ticket purchaser declares how many and what type of tickets they want to buy.
@@ -17,18 +15,18 @@ The busniess rules for this service is mentioned below:
                         INFANT        |    £0       |
                         CHILD         |    £15     |
                         ADULT         |    £25      |
-         There is an existing `TicketPaymentService` responsible for taking payments.
-         There is an existing `SeatReservationService` responsible for reserving seats.
+There is an existing `TicketPaymentService` responsible for taking payments.
+There is an existing `SeatReservationService` responsible for reserving seats.
          
-            ****Constraints****
-                The TicketService interface CANNOT be modified.
-                The code in the thirdparty.* packages CANNOT be modified.
-                The `TicketTypeRequest` SHOULD be an immutable object.
+****Constraints****
+The TicketService interface CANNOT be modified.
+The code in the thirdparty.* packages CANNOT be modified.
+The `TicketTypeRequest` SHOULD be an immutable object.
         
-                    ****Assumptions****
-                        You can assume:
-                         All accounts with an id greater than zero are valid. They also have sufficient funds to pay for any no of tickets.
-                        The `TicketPaymentService` implementation is an external provider with no defects. You do not need to worry about how the actual payment happens.
-                        The payment will always go through once a payment request has been made to the `TicketPaymentService`.
-                        The `SeatReservationService` implementation is an external provider with no defects. You do not need to worry about how the seat reservation algorithm works.
-                        The seat will always be reserved once a reservation request has been made to the `SeatReservationService
+****Assumptions****
+You can assume:
+All accounts with an id greater than zero are valid. They also have sufficient funds to pay for any no of tickets.
+The `TicketPaymentService` implementation is an external provider with no defects. You do not need to worry about how the actual payment happens.
+The payment will always go through once a payment request has been made to the `TicketPaymentService`.
+The `SeatReservationService` implementation is an external provider with no defects. You do not need to worry about how the seat reservation algorithm works.
+The seat will always be reserved once a reservation request has been made to the `SeatReservationService
