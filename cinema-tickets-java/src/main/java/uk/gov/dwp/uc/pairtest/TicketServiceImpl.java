@@ -43,7 +43,7 @@ public class TicketServiceImpl implements TicketService {
         }
         int totaltickets = infant + child + adult;
         if (totaltickets == 0 || totaltickets > 25) {
-            throw new InvalidPurchaseException("Invalid ticket request: Must purchase between 1 and 25 tickets.");
+            throw new InvalidPurchaseException("Ticket purchase limit exceeded. You can buy up to 25 tickets per transaction.");
         }
         if (adult == 0 && (child > 0 || infant > 0)) {
             throw new InvalidPurchaseException("Child and Infant tickets cannot be purchased without purchasing an Adult ticket.");

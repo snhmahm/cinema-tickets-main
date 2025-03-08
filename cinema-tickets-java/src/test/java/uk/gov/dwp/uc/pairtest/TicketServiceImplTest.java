@@ -29,7 +29,7 @@ public class TicketServiceImplTest extends TestCase {
 
     @Before
      public void setUp() {
-        MockitoAnnotations.openMocks(this); // Initialize mocks
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class TicketServiceImplTest extends TestCase {
         try{
             ticketServiceImpl.purchaseTickets(1L,req);
         }catch (InvalidPurchaseException e){
-            assertEquals("Invalid ticket request: Must purchase between 1 and 25 tickets.", e.getMessage());
+            assertEquals("Ticket purchase limit exceeded. You can buy up to 25 tickets per transaction.", e.getMessage());
         }
     }
 
@@ -58,7 +58,7 @@ public class TicketServiceImplTest extends TestCase {
         try{
             ticketServiceImpl.purchaseTickets(1L,req);
         }catch (InvalidPurchaseException e){
-            assertEquals("Invalid ticket request: Must purchase between 1 and 25 tickets.", e.getMessage());
+            assertEquals("Ticket purchase limit exceeded. You can buy up to 25 tickets per transaction.", e.getMessage());
         }
     }
 
@@ -68,7 +68,7 @@ public class TicketServiceImplTest extends TestCase {
         try{
             ticketServiceImpl.purchaseTickets(1L,req);
         }catch (InvalidPurchaseException e){
-            assertEquals("Invalid ticket request: Must purchase between 1 and 25 tickets.", e.getMessage());
+            assertEquals("Ticket purchase limit exceeded. You can buy up to 25 tickets per transaction.", e.getMessage());
         }
     }
 
